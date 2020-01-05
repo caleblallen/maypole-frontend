@@ -1,0 +1,19 @@
+<mat-drawer-container class="nav-container" autosize>
+  <mat-drawer class="sideNavList" #drawer [(opened)]="isOpen" mode="side">
+    <mat-nav-list >
+      <a mat-list-item [routerLink]="''">New Project</a>
+
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>Ticket Views</h3>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="''">Ticket List</a>
+      <a mat-list-item [routerLink]="''">Kanban</a>
+
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>Analytics</h3>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="''">Burn Rate</a>
+      <a mat-list-item [routerLink]="''">Employee Reports</a>
+    </mat-nav-list>
+  </mat-drawer>
+</mat-drawer-container>
