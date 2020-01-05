@@ -1,5 +1,5 @@
 <mat-drawer-container class="nav-container" autosize>
-  <mat-drawer class="sideNavList" #drawer [(opened)]="isOpen" mode="side">
+  <mat-drawer class="sideNavList mat-elevation-z5" #drawer [(opened)]="isOpen" mode="side">
     <mat-nav-list >
       <a mat-list-item [routerLink]="''">New Project</a>
 
@@ -16,4 +16,7 @@
       <a mat-list-item [routerLink]="''">Employee Reports</a>
     </mat-nav-list>
   </mat-drawer>
+  <section class="sideNavContent">
+    <router-outlet></router-outlet>
+  </section>
 </mat-drawer-container>
