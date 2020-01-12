@@ -1,29 +1,44 @@
 <ng-container>
-  <mat-toolbar class="topBar mat-elevation-z5" color="primary" fxLayout="row" fxLayoutAlign="space-between center">
-    <!--  <span class="spacer">&nbsp;</span>-->
-    <h1>maypole.io</h1>
-    <div fxLayout="row" fxLayoutAlign="end center" class="userMenus">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
-        <mat-icon matBadge="22" matBadgePosition="above after" matBadgeColor="warn" matBadgeDescription="You have 22 messages">notifications</mat-icon>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="topBar" color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+      <h1 fxHide.xs>maypole.io</h1>
+      <mat-icon fxHide.gt-xs>toys</mat-icon>
+      <h2 >Project Name</h2>
+      <div fxHide.xs fxLayout="row" fxLayoutAlign="end center" class="userMenus">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
+          <mat-icon matBadge="22" matBadgePosition="above after" matBadgeColor="warn" matBadgeDescription="You have 22 messages">notifications</mat-icon>
+        </button>
+        <button mat-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
+          <mat-icon>account_box</mat-icon>
+          <span id="userName">Caleb Allen</span>
+        </button>
+      </div>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row fxHide.gt-xs class="topBar" color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+      <button (click)="navToggle.emit(null)" mat-icon-button aria-label="Toggle Nav Menu">
+        <mat-icon>menu</mat-icon>
       </button>
-      <button mat-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
-        <mat-icon>account_box</mat-icon>
-        <span id="userName">Caleb Allen</span>
+      <div fxLayout="row" fxLayoutAlign="end center" class="userMenus">
+        <button mat-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
+          <mat-icon>account_box</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
+          <mat-icon matBadge="22" matBadgePosition="above after" matBadgeColor="warn" matBadgeDescription="You have 22 messages">notifications</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
       </button>
-    </div>
+      <button mat-menu-item>
+        <mat-icon>power_settings_new</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
   </mat-toolbar>
-
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>settings</mat-icon>
-      <span>Settings</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>power_settings_new</mat-icon>
-      <span>Logout</span>
-    </button>
-  </mat-menu>
-
 </ng-container>
 
 

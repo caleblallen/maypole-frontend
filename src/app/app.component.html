@@ -1,2 +1,2 @@
-<app-topbar></app-topbar>
-<app-sidenav></app-sidenav>
+<app-topbar (navToggle)="passToggle()"></app-topbar>
+<app-sidenav [navToggleObservable]="drawerToggle.asObservable()"></app-sidenav>

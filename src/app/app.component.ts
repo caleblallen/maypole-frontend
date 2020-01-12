@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'maypole-frontend';
+  public drawerToggle: Subject<void> = new Subject<void>();
+
+  passToggle() {
+    this.drawerToggle.next();
+  }
 }
+
