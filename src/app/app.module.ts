@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './Components/sidenav/sidenav.component';
 import {
   MatBadgeModule,
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatIconModule,
   MatListModule,
   MatMenuModule,
@@ -15,12 +15,14 @@ import {
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TopbarComponent } from './Components/topbar/topbar.component';
+import { TaskCardComponent } from './Components/task-card/task-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    TopbarComponent
+    TopbarComponent,
+    TaskCardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { TopbarComponent } from './Components/topbar/topbar.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

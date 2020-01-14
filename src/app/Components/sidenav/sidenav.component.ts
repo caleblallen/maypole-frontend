@@ -2,11 +2,13 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { MatDrawerToggleResult, MatSidenav } from '@angular/material';
 import { Observable } from 'rxjs';
 import { FocusOrigin } from '@angular/cdk/a11y';
+import { ProjectService } from '../../Services/project.service';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.sass']
+  styleUrls: ['./sidenav.component.sass'],
+  providers: [ProjectService]
 })
 export class SidenavComponent implements OnInit {
   @ViewChild( 'drawer', { static: false } ) public drawer: MatSidenav;
@@ -14,7 +16,7 @@ export class SidenavComponent implements OnInit {
   public isOpen: boolean;
   public showFiller: boolean;
   // private toggleDrawer: ( isOpen?: boolean, openedVia?: FocusOrigin ) => Promise<MatDrawerToggleResult>;
-  constructor() {
+  constructor(public proj: ProjectService) {
     this.isOpen = true;
     this.showFiller = false;
 

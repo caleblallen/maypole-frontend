@@ -1,7 +1,7 @@
 <mat-drawer-container class="nav-container" autosize>
   <mat-drawer class="sideNavList mat-elevation-z5" #drawer [(opened)]="isOpen" mode="side">
     <mat-nav-list >
-      <h3 mat-subheader>Project Name</h3>
+      <h3 mat-subheader>{{ proj.getActiveProject().name }}</h3>
       <mat-divider></mat-divider>
       <a mat-list-item [routerLink]="''">Ticket List</a>
       <a mat-list-item [routerLink]="''">Kanban</a>
@@ -18,13 +18,9 @@
       <a mat-list-item [routerLink]="''">Change Project</a>
       <a mat-list-item [routerLink]="''">New Project</a>
 
-      <button (click)="drawer.toggle()" mat-icon-button aria-label="Example icon-button with a heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-
     </mat-nav-list>
   </mat-drawer>
-  <section class="sideNavContent">
+  <mat-drawer-content class="sideNavContent">
     <router-outlet></router-outlet>
-  </section>
+  </mat-drawer-content>
 </mat-drawer-container>

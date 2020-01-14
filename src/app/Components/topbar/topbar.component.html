@@ -1,9 +1,9 @@
 <ng-container>
-  <mat-toolbar color="primary">
+  <mat-toolbar class="topBarWrapper" color="primary">
     <mat-toolbar-row class="topBar" color="primary" fxLayout="row" fxLayoutAlign="space-between center">
       <h1 fxHide.xs>maypole.io</h1>
       <mat-icon fxHide.gt-xs>toys</mat-icon>
-      <h2 >Project Name</h2>
+      <h2 >{{ proj.getActiveProject().name }}</h2>
       <div fxHide.xs fxLayout="row" fxLayoutAlign="end center" class="userMenus">
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="User Account Operations Button with a Menu">
           <mat-icon matBadge="22" matBadgePosition="above after" matBadgeColor="warn" matBadgeDescription="You have 22 messages">notifications</mat-icon>
