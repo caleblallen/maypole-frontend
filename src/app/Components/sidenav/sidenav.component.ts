@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { MatDrawerToggleResult, MatSidenav } from '@angular/material';
+import { MatDrawerToggleResult, MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { FocusOrigin } from '@angular/cdk/a11y';
 import { ProjectService } from '../../Services/project.service';

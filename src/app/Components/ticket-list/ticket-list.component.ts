@@ -3,7 +3,7 @@ import { ProjectService } from '../../Services/project.service';
 import { Project } from '../../Models/Project';
 import { Task } from '../../Models/Task';
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import { ThemePalette } from '@angular/material';
+import { ThemePalette } from '@angular/material/core';
 
 
 @Component({

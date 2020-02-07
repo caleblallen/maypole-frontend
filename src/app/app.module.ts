@@ -4,15 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './Components/sidenav/sidenav.component';
-import {
-  MatBadgeModule,
-  MatButtonModule, MatCardModule, MatChipsModule,
-  MatIconModule,
-  MatListModule,
-  MatMenuModule, MatProgressBarModule,
-  MatSidenavModule, MatTableModule,
-  MatToolbarModule
-} from '@angular/material';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TopbarComponent } from './Components/topbar/topbar.component';
 import { TaskCardComponent } from './Components/task-card/task-card.component';
