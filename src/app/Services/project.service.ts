@@ -10,6 +10,7 @@ class ProjectEntry {
   [id: string]: Project;
 }
 
+@Injectable()
 export class ProjectService {
   private projects: ProjectEntry;
   private activeProjectId: string;

@@ -11,7 +11,7 @@ import { ProjectService } from '../../Services/project.service';
   providers: [ProjectService]
 })
 export class SidenavComponent implements OnInit {
-  @ViewChild( 'drawer', { static: false } ) public drawer: MatSidenav;
+  @ViewChild('drawer') public drawer: MatSidenav;
   @Input() navToggleObservable: Observable<any>;
   public isOpen: boolean;
   public showFiller: boolean;
