@@ -6,23 +6,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './Components/sidenav/sidenav.component';
 import {
   MatBadgeModule,
-  MatButtonModule, MatCardModule,
+  MatButtonModule, MatCardModule, MatChipsModule,
   MatIconModule,
   MatListModule,
-  MatMenuModule,
-  MatSidenavModule,
+  MatMenuModule, MatProgressBarModule,
+  MatSidenavModule, MatTableModule,
   MatToolbarModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TopbarComponent } from './Components/topbar/topbar.component';
 import { TaskCardComponent } from './Components/task-card/task-card.component';
+import { TicketListComponent } from './Components/ticket-list/ticket-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     TopbarComponent,
-    TaskCardComponent
+    TaskCardComponent,
+    TicketListComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,10 @@ import { TaskCardComponent } from './Components/task-card/task-card.component';
     MatButtonModule,
     MatMenuModule,
     MatBadgeModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatProgressBarModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
