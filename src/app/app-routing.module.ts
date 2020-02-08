@@ -6,7 +6,7 @@ import { TicketListComponent } from './Components/ticket-list/ticket-list.compon
 
 const routes: Routes = [
   {path: 'task', component: TaskCardComponent},
-  {path: 'project', component: TicketListComponent}
+  {path: 'projects/:id', component: TicketListComponent}
 ];
 
 @NgModule({

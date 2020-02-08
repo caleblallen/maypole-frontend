@@ -4,6 +4,7 @@ import { Project } from '../../Models/Project';
 import { Task } from '../../Models/Task';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { ThemePalette } from '@angular/material/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -27,7 +28,10 @@ export class TicketListComponent implements OnInit {
   public progressColor: ThemePalette = 'warn';
   public expandedTask: Task | null;
 
-  constructor(private projectService: ProjectService) {
+  constructor(private projectService: ProjectService, private router: ActivatedRoute) {
+    this.router.data.subscribe( (data: {id: string}) => {
+      console.log(data.id);
+    });
     this.currentProject = projectService.getActiveProject();
     // TODO: Add "assigned", "status",
     // this.displayedColumns = ['Task Number', 'Story', 'Progress', 'Submitted', 'Due'];
